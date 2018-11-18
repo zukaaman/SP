@@ -1,0 +1,188 @@
+.contacts {
+  padding: 50px 0 20px;
+  min-height: calc(100vh - 298px);
+
+  background-color: #e7e7e7;
+
+  @include m-1200 {
+    padding: 60px 0 30px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+    @include m-1200 {
+      flex-direction: column;
+    }
+  }
+
+  .contacts-info {
+    margin-right: auto;
+
+    @include m-1200 {
+      display: flex;
+      margin-bottom: 30px;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    @include m-768 {
+      flex-direction: column;
+    }
+
+    .contacts-info-wrapper {
+
+      @include m-1200 {
+        width: 48%;
+      }
+
+      @include m-768 {
+        width: 100%;
+      }
+    }
+
+    .contacts-address-wrapper {
+
+      @include m-1200 {
+        width: 48%;
+      }
+
+      @include m-768 {
+        width: 100%;
+      }
+    }
+  }
+
+  .contacts-title {
+    margin-bottom: 20px;
+
+    color: #171717;
+    font-family: $font-m;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.3px;
+  }
+
+  .contacts-text {
+    margin-bottom: 20px;
+    max-width: 370px;
+
+    color: #787878;
+    font-family: $font-ns;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.08px;
+  }
+
+  .address,
+  .phone,
+  .email,
+  .fax {
+    color: #787878;
+    font-family: $font-ns;
+    font-size: 16px;
+    line-height: 36px;
+    font-weight: 400;
+    letter-spacing: 0.08px;
+
+    span {
+      color: #171717;
+      font-weight: 700;
+      letter-spacing: 0.08px;
+    }
+  }
+
+  .contacts-form {
+    width: 670px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    @include m-1200 {
+      width: 100%;
+    }
+
+    input {
+      height: 48px;
+
+      background-color: #ffffff;
+    }
+
+    input,
+    textarea {
+      padding: 0 20px;
+
+      color: #787878;
+      font-family: $font-ns;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0.07px;
+    }
+
+    textarea {
+      padding-top: 15px;
+
+      outline: none;
+    }
+  }
+
+  .input-wrapper {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    @include m-768 {
+      flex-direction: column;
+    }
+
+    input {
+      width: 320px;
+
+      @include m-1200 {
+        width: 48%;
+      }
+
+      @include m-768 {
+        width: 100%;
+
+        &:first-child {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+
+  .input-title {
+    flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+
+  .contacts-form-textarea {
+    flex-basis: 100%;
+    margin-bottom: 30px;
+    height: 170px;
+
+    border: none;
+
+    resize: none;
+  }
+
+  .contacts-form-button {
+    padding: 19px 47px;
+
+    color: #141414;
+    font-family: $font-m;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+
+    background-color: #eeeb5f;
+  }
+}

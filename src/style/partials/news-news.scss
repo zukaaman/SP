@@ -1,0 +1,150 @@
+.news {
+  background-color: #ffffff;
+
+  .other-news {
+    position: relative;
+
+    &:nth-of-type(odd) {
+
+      .news-img {
+        left: 50%;
+
+        @include m-768 {
+          top: 310px;
+          left: 0;
+
+          width: 100%;
+        }
+      }
+    }
+
+    &:nth-of-type(even) {
+
+      .news-wrapper {
+        order: 2;
+
+        @include m-768 {
+          order: 1;
+        }
+      }
+
+      .news-title,
+      .news-text,
+      .news-link {
+        margin-left: 100px;
+
+        @include m-1200 {
+          margin-left: 30px;
+        }
+
+        @include m-768 {
+          margin-left: 0;
+        }
+      }
+
+      .news-empty-block {
+        order: 1;
+      }
+
+      .news-img {
+        top: 0;
+        right: 50%;
+
+        @include m-768 {
+          top: 310px;
+          right: 0;
+
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .container {
+    padding-top: 30px;
+    display: flex;
+    height: 310px;
+
+    @include m-768 {
+      flex-direction: column;
+      height: 620px;
+    }
+  }
+
+  .news-wrapper {
+    width: 50%;
+    height: 310px;
+
+    @include m-768 {
+      width: 100%;
+    }
+  }
+
+  .news-title {
+    margin-bottom: 20px;
+
+    color: #171717;
+    font-family: $font-m;
+    font-size: 38px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.38px;
+
+    @include m-1200 {
+      font-size: 31px;
+    }
+  }
+
+  .news-text {
+    margin-bottom: 30px;
+    max-width: 440px;
+    max-height: 96px;
+    overflow: hidden;
+
+    color: #787878;
+    font-family: $font-ns;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.08px;
+
+    @include m-1200 {
+      max-width: 77%;
+    }
+
+    @include m-768 {
+      max-width: none;
+    }
+  }
+
+  .news-link {
+    padding: 19px 47px;
+    display: inline-block;
+
+    color: #141414;
+    font-family: $font-m;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    text-decoration: none;
+
+    background-color: #eeeb5f;
+  }
+
+  .news-empty-block {
+    width: 50%;
+    height: 310px;
+  }
+
+  .news-img {
+    position: absolute;
+    top: 0;
+
+    width: 50%;
+    height: 310px;
+
+    object-fit: cover;
+  }
+}

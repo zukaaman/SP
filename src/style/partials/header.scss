@@ -1,0 +1,318 @@
+header {
+  position: relative;
+
+  padding: 40px 0;
+  height: 136px;
+
+  background-color: #333333;
+
+  @include m-1200 {
+    padding: 48px 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background-color: #2a2a2a;
+
+    @include m-768 {
+      display: none;
+    }
+  }
+
+  .container {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+  }
+
+  .logo-wrapper {
+    margin-right: auto;
+    width: 142px;
+    height: 52px;
+
+    @include m-1200 {
+      width: 99px;
+      height: 36px;
+    }
+  }
+
+  nav {
+    margin-right: 60px;
+
+    &.active {
+      position: absolute;
+      top: 80px;
+      left: 0;
+      z-index: 20;
+
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 10px;
+
+      background-color: #333333;
+    }
+
+    @include m-768 {
+      display: none;
+    }
+
+    a {
+      margin-right: 10px;
+      padding: 0 10px;
+
+      color: #a2a2a2;
+      font-family: $font-m;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 24px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      text-decoration: none;
+
+      @include m-1200 {
+        margin-right: 0;
+        padding: 0 5px;
+      }
+
+      @include m-768 {
+        padding: 0;
+
+        text-align: center;
+        font-size: 18px;
+        line-height: 28px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    a.active {
+      position: relative;
+
+      color: #ffffff;
+      font-weight: 600;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -63px;
+        left: 0;
+        z-index: 10;
+
+        height: 4px;
+        width: 100%;
+        display: block;
+
+        background-color: #eeeb5f;
+
+        @include m-768 {
+          content: none;
+        }
+      }
+    }
+  }
+
+  .language-select {
+    position: absolute;
+    top: 14px;
+    right: 0;
+
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 23px;
+
+    overflow: hidden;
+    cursor: pointer;
+
+    @include m-1200 {
+      top: 6px;
+      right: 30px;
+    }
+
+    @include m-768 {
+      top: 20px;
+      right: 120px;
+    }
+
+    &.open {
+      overflow: visible;
+    }
+
+    li {
+      padding: 5px;
+      min-height: 23px;
+      margin-right: 13px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      order: 2;
+
+      text-align: center;
+
+      &.active {
+        position: relative;
+
+        order: 1;
+
+        pointer-events: none;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 10px;
+          right: -12px;
+
+          width: 8px;
+          height: 4px;
+
+          background-image: url(../img/lang-arrow.png);
+          background-position: 0 0;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+
+    img {
+      width: 23px;
+      height: 13px;
+
+      object-fit: cover;
+    }
+  }
+
+  .nav-burger {
+    width: 42px;
+    height: 42px;
+    display: none;
+
+    border-radius: 1px;
+    border: 1px solid #afaeae;
+
+    &.hidden {
+      display: none;
+    }
+
+    &.cross {
+
+      span {
+        background-color: transparent;
+
+        &::before {
+          top: 7px;
+
+          transform: translateY(-6.5px) rotate(-45deg);
+        }
+
+        &::after {
+          bottom: 7px;
+
+          transform: translateY(7.5px) rotate(-135deg);
+        }
+      }
+    }
+
+    @include m-768 {
+      display: block;
+    }
+
+    span {
+      position: relative;
+
+      width: 22px;
+      height: 2px;
+      display: block;
+      margin: 0 auto;
+
+      background-color: #afaeae;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -8px;
+        left: 0;
+
+        width: 22px;
+        height: 2px;
+
+        background-color: #afaeae;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+
+        width: 22px;
+        height: 2px;
+
+        background-color: #afaeae;
+      }
+    }
+  }
+
+  .nav-burger-close {
+    width: 42px;
+    height: 42px;
+    display: none;
+
+    border-radius: 1px;
+    border: 1px solid #afaeae;
+
+    &.active {
+      display: block;
+    }
+
+
+    span {
+      position: relative;
+
+      width: 22px;
+      height: 2px;
+      display: block;
+      margin: 0 auto;
+
+      background-color: transparent;
+
+      &::before {
+        top: 7px;
+        content: "";
+        position: absolute;
+        left: 0;
+
+        width: 22px;
+        height: 2px;
+
+        background-color: #afaeae;
+
+        transform: translateY(-6.5px) rotate(-45deg);
+      }
+
+      &::after {
+        bottom: 7px;content: "";
+        position: absolute;
+        left: 0;
+
+        width: 22px;
+        height: 2px;
+
+        background-color: #afaeae;
+
+        transform: translateY(7.5px) rotate(-135deg);
+      }
+    }
+  }
+}

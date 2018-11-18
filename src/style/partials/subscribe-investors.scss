@@ -1,0 +1,99 @@
+.subscribe-investors {
+
+  .container {
+
+    @include m-768 {
+      height: 140px;
+      align-items: flex-start;
+    }
+  }
+
+  .subscribe-link {
+    position: relative;
+
+    margin-right: 75px;
+
+    @include m-768 {
+      margin-top: 30px;
+      margin-right: 53px;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      right: -38px;
+
+      width: 6px;
+      height: 6px;
+      background-color: #252525;
+    }
+
+    &::before {
+      top: 20px;
+
+      @include m-768 {
+        top: 18px;
+      }
+    }
+
+    &::after {
+      bottom: 19px;
+
+      @include m-768 {
+        bottom: 18px;
+      }
+    }
+  }
+
+  .archive-link {
+    position: relative;
+
+    padding: 10px 33px;
+    display: inline-block;
+
+    color: #333333;
+    font-family: $font-m;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    text-decoration: none;
+
+    border: 1px solid #333333;
+
+    @include m-768 {
+      margin-top: 30px;
+
+      font-size: 10px;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: -34px;
+
+      width: 6px;
+      height: 6px;
+      background-color: #252525;
+    }
+
+    &::before {
+      top: 20px;
+
+      @include m-768 {
+        top: 18px;
+      }
+    }
+
+    &::after {
+      bottom: 19px;
+
+      @include m-768 {
+        bottom: 18px;
+      }
+    }
+  }
+}

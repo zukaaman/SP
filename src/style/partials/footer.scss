@@ -1,0 +1,144 @@
+footer {
+  width: 100%;
+  bottom: 0;
+  left: 0;
+
+  padding: 50px 0;
+  height: 162px;
+
+  background-color: #141414;
+
+  @include m-1200 {
+    padding: 30px 0;
+  }
+
+  .container {
+    position: relative;
+
+    display: flex;
+  }
+
+  .name {
+    margin-right: auto;
+
+    p {
+
+      &:first-child {
+        margin-bottom: 20px;
+
+        color: #ffffff;
+        font-family: $font-m;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 0.18px;
+
+        @include m-1200 {
+          margin-bottom: 70px;
+        }
+
+        @include m-768 {
+          font-size: 15px;
+        }
+      }
+
+      &:last-child {
+        color: #bcbcbc;
+        font-family: $font-ns;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 24px;
+        letter-spacing: 0.07px;
+
+        @include m-768 {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  .address {
+    display: flex;
+    flex-direction: column;
+    margin-right: 150px;
+
+    @include m-1200 {
+      position: absolute;
+      top: 32px;
+      left: 30px;
+    }
+
+    .email,
+    .phone {
+      color: #bcbcbc;
+      font-family: $font-ns;
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 24px;
+      letter-spacing: 0.07px;
+      text-decoration: none;
+    }
+  }
+
+  .nav {
+    margin-right: 160px;
+    display: flex;
+
+    @include m-1200 {
+      margin-right: 16%;
+    }
+
+    @include m-768 {
+      display: none;
+    }
+
+    .nav-wrapper {
+      display: flex;
+      flex-direction: column;
+      margin-right: 50px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    a {
+      color: #bcbcbc;
+      font-family: $font-ns;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0.07px;
+      text-decoration: none;
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .socials {
+    display: flex;
+
+    .socials-fb {
+      width: 11px;
+      height: 22px;
+      display: block;
+      margin-right: 30px;
+
+      background-image: url("../img/fb-icon.png");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+    }
+
+    .socials-insta {
+      width: 21px;
+      height: 21px;
+      display: block;
+
+      background-image: url("../img/insta-icon.png");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+    }
+  }
+}
